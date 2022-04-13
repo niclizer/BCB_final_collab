@@ -1,7 +1,9 @@
 # BCB_final_collab
 
 
-Citation for the GBIF file (if we use GBIF file): GBIF.org (13 April 2022) GBIF Occurrence Download https://doi.org/10.15468/dl.rmaycb
+Citation for the GBIF file (if we use GBIF file): 
+GBIF.org (13 April 2022) GBIF Occurrence Download https://doi.org/10.15468/dl.hcymrq
+
 Article and datasets will be properly cited in final project. 
 Example citation:
 
