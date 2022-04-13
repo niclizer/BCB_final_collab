@@ -1,0 +1,73 @@
+eventID	eventDate	decimalLatitude	decimalLongitude	geodeticDatum	coordinateUncertaintyInMeters	minimumElevationInMeters	samplingMethod	habitat	recordedBy	country
+KROK01	2018-10-17/2018-10-25	45.53874	14.76364	EPSG:4326	30	1113	pitfall traps	virgin forest, sapling	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK02	2018-10-17/2018-10-25	45.53863	14.76375	EPSG:4326	30	1113	pitfall traps	virgin forest, sapling	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK03	2018-10-17/2018-10-25	45.53897	14.76463	EPSG:4326	30	1138	pitfall traps	virgin forest, sawlog	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK04	2018-10-17/2018-10-25	45.53891	14.76478	EPSG:4326	30	1134	pitfall traps	virgin forest, sawlog	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK05	2018-10-17/2018-10-25	45.53872	14.76265	EPSG:4326	30	1110	pitfall traps	virgin forest, pole	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK06	2018-10-17/2018-10-25	45.53868	14.7627	EPSG:4326	30	1108	pitfall traps	virgin forest, pole	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK07	2018-10-17	45.53874	14.76364	EPSG:4326	30	1113	leaf litter sifting	virgin forest, sapling	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK08	2018-10-17	45.53874	14.76364	EPSG:4326	30	1113	hand picking	virgin forest, sapling	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK09	2018-10-17	45.53891	14.76478	EPSG:4326	30	1134	leaf litter sifting	virgin forest, sawlog	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK10	2018-10-17	45.53891	14.76478	EPSG:4326	30	1134	hand picking	virgin forest, sawlog	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK11	2018-10-17	45.53872	14.76265	EPSG:4326	30	1110	leaf litter sifting	virgin forest, pole	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK12	2018-10-17	45.53872	14.76265	EPSG:4326	30	1110	hand picking	virgin forest, pole	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK13	2018-10-17	45.53872	14.76265	EPSG:4326	30	1113	soil sampling	virgin forest, pole	Franc Kljun	Slovenia
+KROK14	2018-10-17	45.53891	14.76478	EPSG:4326	30	1134	soil sampling	virgin forest, sawlog	Franc Kljun	Slovenia
+KROK15	2018-10-17	45.53874	14.76364	EPSG:4326	30	1110	soil sampling	virgin forest, sapling	Franc Kljun	Slovenia
+KROK16	2018-10-24	45.5393	14.76008	EPSG:4326	30	1108	soil sampling	secondary forest, pole	Franc Kljun	Slovenia
+KROK17	2018-10-24	45.5393	14.76038	EPSG:4326	30	1109	soil sampling	secondary forest, sawlog	Franc Kljun	Slovenia
+KROK18	2018-10-24	45.53924	14.76065	EPSG:4326	30	1101	soil sampling	secondary forest, sapling	Franc Kljun	Slovenia
+KROK19	2018-10-25	45.5393	14.76008	EPSG:4326	30	1108	leaf litter sifting	secondary forest, pole	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK20	2018-10-25	45.5393	14.76038	EPSG:4326	30	1109	leaf litter sifting	secondary forest, sawlog	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK21	2018-10-25	45.53924	14.76065	EPSG:4326	30	1101	leaf litter sifting	secondary forest, sapling	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK22	2018-10-25	45.5393	14.76008	EPSG:4326	30	1108	hand picking	secondary forest, pole	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK23	2018-10-25	45.5393	14.76038	EPSG:4326	30	1109	hand picking	secondary forest, sawlog	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK24	2018-10-25	45.53924	14.76065	EPSG:4326	30	1101	hand picking	secondary forest, sapling	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK25	2019-01-04/2019-01-16	45.53872	14.76265	EPSG:4326	30	1113	pitfall traps	virgin forest, pole	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK26	2019-01-04/2019-01-16	45.53891	14.76478	EPSG:4326	30	1134	pitfall traps	virgin forest, sawlog	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK27	2019-01-04/2019-01-16	45.53874	14.76364	EPSG:4326	30	1110	pitfall traps	virgin forest, sapling	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK28	2019-01-04	45.53872	14.76265	EPSG:4326	30	1113	soil sampling	virgin forest, pole	Franc Kljun	Slovenia
+KROK29	2019-01-04	45.53891	14.76478	EPSG:4326	30	1134	soil sampling	virgin forest, sawlog	Franc Kljun	Slovenia
+KROK30	2019-01-04	45.53874	14.76364	EPSG:4326	30	1110	soil sampling	virgin forest, sapling	Franc Kljun	Slovenia
+KROK31	2019-01-04	45.5393	14.76008	EPSG:4326	30	1108	soil sampling	secondary forest, pole	Franc Kljun	Slovenia
+KROK32	2019-01-04	45.5393	14.76038	EPSG:4326	30	1109	soil sampling	secondary forest, sawlog	Franc Kljun	Slovenia
+KROK33	2019-01-04	45.53924	14.76065	EPSG:4326	30	1101	soil sampling	secondary forest, sapling	Franc Kljun	Slovenia
+KROK34	2019-01-04/2019-01-16	45.53928	14.76015	EPSG:4326	30	1108	pitfall traps	secondary forest, pole	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK35	2019-01-04/2019-01-16	45.5393	14.76037	EPSG:4326	30	1109	pitfall traps	secondary forest, sawlog	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK36	2019-01-04/2019-01-16	45.53923	14.76064	EPSG:4326	30	1101	pitfall traps	secondary forest, sapling	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK37	2019-04-19/2019-05-07	45.53874	14.76364	EPSG:4326	30	1110	pitfall traps	virgin forest, sapling	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK38	2019-04-19/2019-05-07	45.53874	14.76364	EPSG:4326	30	1110	pitfall traps	virgin forest, sapling	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK39	2019-04-19/2019-05-07	45.538733	14.763949	EPSG:4326	30	1115	pitfall traps	virgin forest, pole	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK40	2019-04-19/2019-05-07	45.538733	14.763949	EPSG:4326	30	1115	pitfall traps	virgin forest, pole	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK41	2019-04-19/2019-05-07	45.53891	14.76478	EPSG:4326	30	1134	pitfall traps	virgin forest, sawlog	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK42	2019-04-19/2019-05-07	45.53891	14.76478	EPSG:4326	30	1134	pitfall traps	virgin forest, sawlog	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK43	2019-04-19/2019-05-07	45.53923	14.76064	EPSG:4326	30	1101	pitfall traps	secondary forest, sapling	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK44	2019-04-19/2019-05-07	45.53923	14.76064	EPSG:4326	30	1101	pitfall traps	secondary forest, sapling	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK45	2019-04-19/2019-05-07	45.53928	14.76015	EPSG:4326	30	1108	pitfall traps	secondary forest, pole	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK46	2019-04-19/2019-05-07	45.53928	14.76015	EPSG:4326	30	1108	pitfall traps	secondary forest, pole	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK47	2019-04-19/2019-05-07	45.5393	14.76037	EPSG:4326	30	1109	pitfall traps	secondary forest, sawlog	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK48	2019-04-19/2019-05-07	45.5393	14.76037	EPSG:4326	30	1109	pitfall traps	secondary forest, sawlog	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK49	2019-05-17/2019-05-28	45.53874	14.76364	EPSG:4326	30	1110	pitfall traps	virgin forest, sapling	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK50	2019-05-17/2019-05-28	45.53874	14.76364	EPSG:4326	30	1110	pitfall traps	virgin forest, sapling	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK51	2019-05-17/2019-05-28	45.538733	14.763949	EPSG:4326	30	1115	pitfall traps	virgin forest, pole	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK52	2019-05-17/2019-05-28	45.538733	14.763949	EPSG:4326	30	1115	pitfall traps	virgin forest, pole	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK53	2019-05-17/2019-05-28	45.53891	14.76478	EPSG:4326	30	1134	pitfall traps	virgin forest, sawlog	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK54	2019-05-17/2019-05-28	45.53891	14.76478	EPSG:4326	30	1134	pitfall traps	virgin forest, sawlog	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK55	2019-05-17/2019-05-28	45.53923	14.76064	EPSG:4326	30	1101	pitfall traps	secondary forest, sapling	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK56	2019-05-17/2019-05-28	45.53923	14.76064	EPSG:4326	30	1101	pitfall traps	secondary forest, sapling	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK57	2019-05-17/2019-05-28	45.53928	14.76015	EPSG:4326	30	1108	pitfall traps	secondary forest, pole	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK58	2019-05-17/2019-05-28	45.53928	14.76015	EPSG:4326	30	1108	pitfall traps	secondary forest, pole	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK59	2019-05-17/2019-05-28	45.5393	14.76037	EPSG:4326	30	1109	pitfall traps	secondary forest, sawlog	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK60	2019-05-17/2019-05-28	45.5393	14.76037	EPSG:4326	30	1109	pitfall traps	secondary forest, sawlog	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK61	2019-08-01/2019-08-09	45.53874	14.76364	EPSG:4326	30	1110	pitfall traps	virgin forest, sapling	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK62	2019-08-01/2019-08-09	45.53874	14.76364	EPSG:4326	30	1110	pitfall traps	virgin forest, sapling	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK63	2019-08-01/2019-08-09	45.538733	14.763949	EPSG:4326	30	1115	pitfall traps	virgin forest, pole	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK64	2019-08-01/2019-08-09	45.538733	14.763949	EPSG:4326	30	1115	pitfall traps	virgin forest, pole	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK65	2019-08-01/2019-08-09	45.53891	14.76478	EPSG:4326	30	1134	pitfall traps	virgin forest, sawlog	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK66	2019-08-01/2019-08-09	45.53891	14.76478	EPSG:4326	30	1134	pitfall traps	virgin forest, sawlog	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK67	2019-08-01/2019-08-09	45.53923	14.76064	EPSG:4326	30	1101	pitfall traps	secondary forest, sapling	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK68	2019-08-01/2019-08-09	45.53923	14.76064	EPSG:4326	30	1101	pitfall traps	secondary forest, sapling	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK69	2019-08-01/2019-08-09	45.53928	14.76015	EPSG:4326	30	1108	pitfall traps	secondary forest, pole	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK70	2019-08-01/2019-08-09	45.53928	14.76015	EPSG:4326	30	1108	pitfall traps	secondary forest, pole	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK71	2019-08-01/2019-08-09	45.5393	14.76037	EPSG:4326	30	1109	pitfall traps	secondary forest, sawlog	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
+KROK72	2019-08-01/2019-08-09	45.5393	14.76037	EPSG:4326	30	1109	pitfall traps	secondary forest, sawlog	Žan Kuralt | Neža Pajek Arambašic | Maja Ferle	Slovenia
