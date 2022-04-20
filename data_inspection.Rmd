@@ -57,8 +57,17 @@ Next check out the various family names in this file.
 
 (note: I'm just doing all this to inspect the file, we don't have to use these processes.)
 ```{r}
-unique(bdj$family_name) %>% as.matrix(family_name) -> family_name
-kable(family_name)
+unique(bdj$family_name) %>% as.matrix(family_name) -> family_name_view
+kable(family_name_view)
 
 ```
 
+I'd like to visualize how many samples per family we have. In other words, how many "Therididae"? How many "Anapidae"?
+
+I'll use ggplot to do this. 
+```{r}
+ggplot(bdj, aes(x = family_name, fill=family_name)) +
+  geom_bar() +
+  labs(title="Individuals per Family", 
+         x="Family Name", y = "Count")
+```
