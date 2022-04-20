@@ -29,7 +29,9 @@ Let's look at the first 5 rows in this file. It's a large chunk, but very intere
 kable(bdj[1:5, ])
 ```
 From this point, we can pick out columns that we want to work with. For practice, I will select the phylum-subspecies taxID and name columns (14 columns total) and convert them to factor. After this (hidden) code chunk, the "bdj" object (our data) columns with these names will be converted from "numeric" or "character" to "factor". Since they are now factors, we can run other analyses on them and visualize how many of each, etc. 
+
 ```{r, chunk, echo=FALSE, include=FALSE}
+
 bdj$phylum_taxID = as.factor(as.numeric(bdj$phylum_taxID))
 bdj$class_taxID = as.factor(as.numeric(bdj$class_taxID))
 bdj$order_taxID = as.factor(as.numeric(bdj$order_taxID))
