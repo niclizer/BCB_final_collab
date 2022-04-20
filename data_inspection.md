@@ -1,8 +1,9 @@
 ---
 title: "markdown"
 output:
-  pdf_document: default
   html_document: default
+  word_document: default
+  pdf_document: default
 date: '2022-04-20'
 ---
 First, I will load in the packages (tidyverse, lemon, knitr). This code is in the script but not knit to the markdown document for readability. 
