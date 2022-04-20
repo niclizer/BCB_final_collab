@@ -149,7 +149,7 @@ ggplot(bdj, aes(x=reorder(genus_name, genus_name, function(x)-length(x)),fill=ge
   labs(title="Individuals per Genus", 
          x="Family Name", y = "Count") +
   theme(axis.text.x = element_text(angle = 90)) +
-  theme(legend.position="none")
+  theme(legend.position="none") 
 ```
 
 ![](data_inspection_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
