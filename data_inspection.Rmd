@@ -69,5 +69,19 @@ I'll use ggplot to do this.
 ggplot(bdj, aes(x = family_name, fill=family_name)) +
   geom_bar() +
   labs(title="Individuals per Family", 
-         x="Family Name", y = "Count")
+         x="Family Name", y = "Count") +
+  theme(axis.text.x = element_text(angle = 90))
 ```
+
+That looks so cool and I want to do another one. This one will be genus. 
+
+```{r}
+ggplot(bdj, aes(x = genus_name, fill=genus_name)) +
+  geom_bar() +
+  labs(title="Individuals per Genus", 
+         x="Genus Name", y = "Count") +
+  theme(axis.text.x = element_text(angle = 90)) +
+  theme(legend.position="none")
+```
+
+Not very easy to read but the colors are colorful.
