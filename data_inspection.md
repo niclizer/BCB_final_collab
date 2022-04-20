@@ -10,18 +10,16 @@ from our paper of choice and (I believe) contains all the data we will
 need to work with, including sample IDs, geographic information, and
 sequences.
 
-    ## Rows: 124 Columns: 80
-    ## ── Column specification ────────────────────────────────────────────────────────
-    ## Delimiter: "\t"
-    ## chr (41): processid, sampleid, catalognum, institution_storing, bin_uri, phy...
-    ## dbl (14): recordID, phylum_taxID, class_taxID, order_taxID, family_taxID, su...
-    ## lgl (25): fieldnum, collection_code, subspecies_taxID, subspecies_name, tax_...
-    ## 
-    ## ℹ Use `spec()` to retrieve the full column specification for this data.
-    ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+After reading in the file, I inspect the column dimensions
 
-After reading in the file, I inspect the column names. There are 80
-columns in this file.
+``` r
+dim(bdj)
+```
+
+    ## [1] 124  80
+
+There are 80 columns and 124 rows in this file. Next check out column
+names.
 
 ``` r
 print(column_names)

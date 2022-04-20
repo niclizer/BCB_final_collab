@@ -12,10 +12,15 @@ library(knitr)
 
 I also read in the "DS-KROK4BDJ.txt" file, which is a tsv downloaded from our paper of choice and (I believe) contains all the data we will need to work with, including sample IDs, geographic information, and sequences. 
 ```{r,my-chunk, echo=FALSE}
-bdj<-read_tsv("DS-KROK4BDJ.txt")
+bdj<-read_tsv("DS-KROK4BDJ.txt", show_col_types = FALSE )
 column_names <- colnames(bdj)
 ```
-After reading in the file, I inspect the column names. There are 80 columns in this file. 
+After reading in the file, I inspect the column dimensions
+```{r}
+dim(bdj)
+```
+
+There are 80 columns and 124 rows in this file. Next check out column names. 
 ```{r}
 print(column_names)
 ```
