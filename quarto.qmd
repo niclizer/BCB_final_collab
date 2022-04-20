@@ -16,3 +16,9 @@ print(column_names)
 So you can see there are quite a few columns in this document.
 
 I believe that most of the columns should be factors for this analysis.
+
+```{r}
+head(bdj,5)
+```
+
+Flip through the head of the file and see.
