@@ -20,7 +20,6 @@ After reading in the file, I inspect the column names. There are 80 columns in t
 print(column_names)
 ```
 Let's look at the first 5 rows in this file. It's a large chunk, but very interesting. Scroll side to side to see the whole chunk. 
-
 ```{r}
 kable(bdj[1:5, ])
 ```
