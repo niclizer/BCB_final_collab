@@ -8,6 +8,10 @@ First, I will load in the packages (tidyverse, lemon, knitr). This code is in th
 library(tidyverse)
 library(lemon)
 library(knitr)
+library(janitor)
+library(dplyr )
+library(ggplot2)
+library(reshape2)
 ```
 
 I also read in the "DS-KROK4BDJ.txt" file, which is a tsv downloaded from our paper of choice and (I believe) contains all the data we will need to work with, including sample IDs, geographic information, and sequences. 
@@ -39,13 +43,22 @@ bdj$family_taxID = as.factor(as.numeric(bdj$family_taxID))
 bdj$genus_taxID = as.factor(as.numeric(bdj$genus_taxID))
 bdj$species_taxID = as.factor(as.numeric(bdj$species_taxID))
 bdj$subspecies_taxID = as.factor(as.numeric(bdj$subspecies_taxID))
-
-bdj$phylum_name = as.factor(as.numeric(bdj$phylum_name))
-bdj$class_name = as.factor(as.numeric(bdj$class_name))
-bdj$order_name = as.factor(as.numeric(bdj$order_name))
-bdj$family_name = as.factor(as.numeric(bdj$family_name))
-bdj$genus_name = as.factor(as.numeric(bdj$genus_name))
-bdj$species_name = as.factor(as.numeric(bdj$species_name))
-bdj$subspecies_name = as.factor(as.numeric(bdj$subspecies_name))
+bdj$phylum_name = as.factor(as.character(bdj$phylum_name))
+bdj$class_name = as.factor(as.character(bdj$class_name))
+bdj$order_name = as.factor(as.character(bdj$order_name))
+bdj$family_name = as.factor(as.character(bdj$family_name))
+bdj$genus_name = as.factor(as.character(bdj$genus_name))
+bdj$species_name = as.factor(as.character(bdj$species_name))
+bdj$subspecies_name = as.factor(as.character(bdj$subspecies_name))
 ```
 (The code is here, trust me. Check the Rmd file if you want to see it)
+
+Next check out the various family names in this file. 
+
+(note: I'm just doing all this to inspect the file, we don't have to use these processes.)
+```{r}
+unique(bdj$family_name) %>% as.matrix(family_name) -> family_name
+kable(family_name)
+
+```
+

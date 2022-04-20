@@ -89,4 +89,37 @@ converted from “numeric” or “character” to “factor”. Since they are 
 factors, we can run other analyses on them and visualize how many of
 each, etc.
 
-Now let’s move on.
+(The code is here, trust me. Check the Rmd file if you want to see it)
+Next check out the various family names in this file. (note: I’m just
+doing all this to inspect the file, we don’t have to use these
+processes.)
+
+``` r
+unique(bdj$family_name) %>% as.matrix(family_name) -> family_name
+kable(family_name)
+```
+
+|                   |
+|:------------------|
+| Carabidae         |
+| Geophilidae       |
+| Linotaeniidae     |
+| Mecistocephalidae |
+| Lithobiidae       |
+| Cryptopidae       |
+| Agelenidae        |
+| Anapidae          |
+| Clubionidae       |
+| Dysderidae        |
+| Gnaphosidae       |
+| Theridiidae       |
+| Linyphiidae       |
+| Lycosidae         |
+| Miturgidae        |
+| Segestriidae      |
+| Schendylidae      |
+| Araneidae         |
+| Staphylinidae     |
+| Elateridae        |
+| Amaurobiidae      |
+| Hahniidae         |
