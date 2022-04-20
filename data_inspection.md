@@ -132,7 +132,7 @@ words, how many “Therididae”? How many “Anapidae”?
 I’ll use ggplot to do this.
 
 ``` r
-ggplot(bdj, aes(x = family_name, fill=family_name)) +
+ggplot(bdj, aes(x=reorder(family_name, family_name, function(x)-length(x)),fill=family_name)) +
   geom_bar() +
   labs(title="Individuals per Family", 
          x="Family Name", y = "Count") +
@@ -144,10 +144,10 @@ ggplot(bdj, aes(x = family_name, fill=family_name)) +
 That looks so cool and I want to do another one. This one will be genus.
 
 ``` r
-ggplot(bdj, aes(x = genus_name, fill=genus_name)) +
+ggplot(bdj, aes(x=reorder(genus_name, genus_name, function(x)-length(x)),fill=genus_name)) +
   geom_bar() +
   labs(title="Individuals per Genus", 
-         x="Genus Name", y = "Count") +
+         x="Family Name", y = "Count") +
   theme(axis.text.x = element_text(angle = 90)) +
   theme(legend.position="none")
 ```
