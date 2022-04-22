@@ -22,49 +22,91 @@ There are 80 columns and 124 rows in this file. Next check out column
 names.
 
 ``` r
-print(column_names)
+kable(column_names)
 ```
 
-    ##  [1] "processid"                  "sampleid"                  
-    ##  [3] "recordID"                   "catalognum"                
-    ##  [5] "fieldnum"                   "institution_storing"       
-    ##  [7] "collection_code"            "bin_uri"                   
-    ##  [9] "phylum_taxID"               "phylum_name"               
-    ## [11] "class_taxID"                "class_name"                
-    ## [13] "order_taxID"                "order_name"                
-    ## [15] "family_taxID"               "family_name"               
-    ## [17] "subfamily_taxID"            "subfamily_name"            
-    ## [19] "genus_taxID"                "genus_name"                
-    ## [21] "species_taxID"              "species_name"              
-    ## [23] "subspecies_taxID"           "subspecies_name"           
-    ## [25] "identification_provided_by" "identification_method"     
-    ## [27] "identification_reference"   "tax_note"                  
-    ## [29] "voucher_status"             "tissue_type"               
-    ## [31] "collection_event_id"        "collectors"                
-    ## [33] "collectiondate_start"       "collectiondate_end"        
-    ## [35] "collectiontime"             "collection_note"           
-    ## [37] "site_code"                  "sampling_protocol"         
-    ## [39] "lifestage"                  "sex"                       
-    ## [41] "reproduction"               "habitat"                   
-    ## [43] "associated_specimens"       "associated_taxa"           
-    ## [45] "extrainfo"                  "notes"                     
-    ## [47] "lat"                        "lon"                       
-    ## [49] "coord_source"               "coord_accuracy"            
-    ## [51] "elev"                       "depth"                     
-    ## [53] "elev_accuracy"              "depth_accuracy"            
-    ## [55] "country"                    "province_state"            
-    ## [57] "region"                     "sector"                    
-    ## [59] "exactsite"                  "image_ids"                 
-    ## [61] "image_urls"                 "media_descriptors"         
-    ## [63] "captions"                   "copyright_holders"         
-    ## [65] "copyright_years"            "copyright_licenses"        
-    ## [67] "copyright_institutions"     "photographers"             
-    ## [69] "sequenceID"                 "markercode"                
-    ## [71] "genbank_accession"          "nucleotides"               
-    ## [73] "trace_ids"                  "trace_names"               
-    ## [75] "trace_links"                "run_dates"                 
-    ## [77] "sequencing_centers"         "directions"                
-    ## [79] "seq_primers"                "marker_codes"
+| x                          |
+|:---------------------------|
+| processid                  |
+| sampleid                   |
+| recordID                   |
+| catalognum                 |
+| fieldnum                   |
+| institution_storing        |
+| collection_code            |
+| bin_uri                    |
+| phylum_taxID               |
+| phylum_name                |
+| class_taxID                |
+| class_name                 |
+| order_taxID                |
+| order_name                 |
+| family_taxID               |
+| family_name                |
+| subfamily_taxID            |
+| subfamily_name             |
+| genus_taxID                |
+| genus_name                 |
+| species_taxID              |
+| species_name               |
+| subspecies_taxID           |
+| subspecies_name            |
+| identification_provided_by |
+| identification_method      |
+| identification_reference   |
+| tax_note                   |
+| voucher_status             |
+| tissue_type                |
+| collection_event_id        |
+| collectors                 |
+| collectiondate_start       |
+| collectiondate_end         |
+| collectiontime             |
+| collection_note            |
+| site_code                  |
+| sampling_protocol          |
+| lifestage                  |
+| sex                        |
+| reproduction               |
+| habitat                    |
+| associated_specimens       |
+| associated_taxa            |
+| extrainfo                  |
+| notes                      |
+| lat                        |
+| lon                        |
+| coord_source               |
+| coord_accuracy             |
+| elev                       |
+| depth                      |
+| elev_accuracy              |
+| depth_accuracy             |
+| country                    |
+| province_state             |
+| region                     |
+| sector                     |
+| exactsite                  |
+| image_ids                  |
+| image_urls                 |
+| media_descriptors          |
+| captions                   |
+| copyright_holders          |
+| copyright_years            |
+| copyright_licenses         |
+| copyright_institutions     |
+| photographers              |
+| sequenceID                 |
+| markercode                 |
+| genbank_accession          |
+| nucleotides                |
+| trace_ids                  |
+| trace_names                |
+| trace_links                |
+| run_dates                  |
+| sequencing_centers         |
+| directions                 |
+| seq_primers                |
+| marker_codes               |
 
 Let’s look at the first 5 rows in this file. It’s a large chunk, but
 very interesting. Scroll side to side to see the whole chunk.

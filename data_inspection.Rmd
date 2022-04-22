@@ -26,7 +26,7 @@ dim(bdj)
 
 There are 80 columns and 124 rows in this file. Next check out column names. 
 ```{r}
-print(column_names)
+kable(column_names)
 ```
 Let's look at the first 5 rows in this file. It's a large chunk, but very interesting. Scroll side to side to see the whole chunk. 
 ```{r}
