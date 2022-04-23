@@ -13,6 +13,7 @@ library(dplyr )
 library(ggplot2)
 library(reshape2)
 library(bold)
+library(spider)
 ```
 
 I also read in the "DS-KROK4BDJ.txt" file, which is a tsv downloaded from our paper of choice and (I believe) contains all the data we will need to work with, including sample IDs, geographic information, and sequences. 
@@ -89,3 +90,23 @@ ggplot(bdj, aes(x=reorder(genus_name, genus_name, function(x)-length(x)),fill=ge
 ```
 
 Not very easy to read but the colors are colorful.
+```{r}
+phylo <- bdj
+view(phylo)
+```
+Now we prepare to retrieve the BOLD sequence data. 
+
+```{r}
+phylo1 <- phylo%>%add_column(retrieved_seq = NA )%>%select(1:8,81,everything())
+view(phylo1)
+```
+
+We have created the empty column where sequences from BOLD will be put. 
+```{r}
+slicey <- phylo1%>%slice(1:10)
+view(slicey)
+```
+Created slicey to practice on
+```{r}
+
+```
