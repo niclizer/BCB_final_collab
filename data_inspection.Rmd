@@ -208,14 +208,24 @@ sequence_merge_main <- merge(seqlist3, bdj, by = "processid")
 
 Our retrieved sequences and the original "bdj" file are merged by the "processid" column into the "sequence_merge_main" dataframe. This is now the dataframe for the first steps of the tree. 
 Next step is to make the fasta file for the tree. 
-Credit below code: Seth Bannister 
+Credit below code: Seth Bannister https://stackoverflow.com/questions/23374100/convert-table-into-fasta-in-r
 ```{r}
 names <- (seqlist3$processid)
 sequences <- (seqlist3$retrieved_seq)
 dfintermediate <- data.frame(names,sequences)
-df.fasta1 = dataframe2fas(dfintermediate, file = "df.fasta1")
-view(df.fasta1)
+df1.fasta = dataframe2fas(dfintermediate, file = "df1.fasta")
 ```
-df.fasta1 is our new fasta file. 
+df.fasta1 is our new fasta file. Now we will use "msa" to align the reads. 
+```{r}
+#fastatry <- system.file("df1.fasta", package = "msa"
+mySequences <- readDNAStringSet("df1.fasta")
+mySequences
+```
+Next align the sequences. 
+```{r}
+myFirstAlignment <- msa(mySequences)
+```
+Looks perfect!
+
 
 
