@@ -15,6 +15,13 @@ library(reshape2)
 library(bold)
 library(spider)
 library(data.table)
+library(ggtree)
+library(treeio)
+
+#if (!require("BiocManager", quietly = TRUE))
+    #install.packages("BiocManager")
+
+#BiocManager::install("ggtree")
 ```
 
 I also read in the "DS-KROK4BDJ.txt" file, which is a tsv downloaded from our paper of choice and (I believe) contains all the data we will need to work with, including sample IDs, geographic information, and sequences. 
@@ -99,13 +106,11 @@ Now we prepare to retrieve the BOLD sequence data.
 
 ```{r}
 phylo1 <- phylo%>%add_column(retrieved_seq = NA )%>%select(1:8,81,everything())
-view(phylo1)
 ```
 
 We have created the empty column where sequences from BOLD will be put. 
 ```{r}
 slicey <- phylo1%>%slice(1:10)
-view(slicey)
 ```
 Created slicey to practice on
 
@@ -122,8 +127,6 @@ First we make the BOLD output file into a dataframe. This is a very wide datafra
 ```{r}
 str(check2)
 sequence_df<- as.data.frame(check2)
-sequence_df
-view(sequence_df)
 ```
 
 We want to extract the columns for "id" and "sequence". 
@@ -161,7 +164,6 @@ now seqlist2 contains the data we need to merge with our original file
 
 ```{r}
 check2_1<- bold_seq(taxon = NULL, ids = bdj$processid, bin = NULL, container = NULL, institutions = NULL, researchers = NULL, geo = NULL, marker = "COI-5P", response = FALSE)
-view(check2_1)
 ```
 
 Here we matched the bin_uri information to the BOLD database, retrieved the sequence. And next we checked manually the first few entries against the NCBI database to double check the correct species was identified. We used process_id and bin_uri to define the gene and the species. 
@@ -174,7 +176,6 @@ First we make the BOLD output file into a dataframe. This is a very wide datafra
 str(check2_1)
 sequence_df2<- as.data.frame(check2_1)
 sequence_df2
-view(sequence_df2)
 ```
 
 We want to extract the columns for "id" and "sequence". 
@@ -199,7 +200,8 @@ now seqlist3 contains the data we need to merge with our original file. "retriev
 sequence_merge_main <- merge(seqlist3, bdj, by = "processid")
 ```
 
-Our retrieved sequences and the original "bdj" file are merged by the "processid" column. 
+Our retrieved sequences and the original "bdj" file are merged by the "processid" column into the "sequence_merge_main" dataframe. This is now the dataframe for the first steps of the tree. 
+Next step is to make the phylogenetic tree. 
 ```{r}
 
 ```
