@@ -153,6 +153,56 @@ now seqlist2 contains the data we need to merge with our original file
 ```{r}
 
 ```
+###################################
+#New Thing!!##
+
+
+
+
+```{r}
+check2_1<- bold_seq(taxon = NULL, ids = bdj$processid, bin = NULL, container = NULL, institutions = NULL, researchers = NULL, geo = NULL, marker = "COI-5P", response = FALSE)
+view(check2_1)
+```
+
+Here we matched the bin_uri information to the BOLD database, retrieved the sequence. And next we checked manually the first few entries against the NCBI database to double check the correct species was identified. We used process_id and bin_uri to define the gene and the species. 
+
+check2 was the practice data. 
+Next we need to read the check2 into a table or similar and extract the sequences. 
+First we make the BOLD output file into a dataframe. This is a very wide dataframe with many columns. 
+
+```{r}
+str(check2_1)
+sequence_df2<- as.data.frame(check2_1)
+sequence_df2
+view(sequence_df2)
+```
+
+We want to extract the columns for "id" and "sequence". 
+
+
+Credit for below code: https://stackoverflow.com/questions/26973029/split-one-row-after-every-3rd-column-and-transport-those-3-columns-as-a-new-row
+
+
+```{r}
+seqlist2<- as.data.frame(matrix(unlist(sequence_df2, use.names = FALSE), ncol = 4, byrow= TRUE))
+```
+
+```{r}
+seqlist3=seqlist2
+seqlist3 <- as.tibble(seqlist2) %>%select(1,4)
+colnames(seqlist3) = c("processid", "retrieved_seq")
+```
+
+
+now seqlist3 contains the data we need to merge with our original file. "retrieved_seq" is the column with our retrieved sequences.  
+```{r}
+sequence_merge_main <- merge(seqlist3, bdj, by = "processid")
+```
+
+Our retrieved sequences and the original "bdj" file are merged by the "processid" column. 
+```{r}
+
+```
 
 
 
