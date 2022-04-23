@@ -15,11 +15,17 @@ library(reshape2)
 library(bold)
 library(spider)
 library(data.table)
+library(msa)
 library(ggtree)
 library(treeio)
-
+library(phangorn)
+library(seqRFLP)
+#if (!requireNamespace("BiocManager", quietly=TRUE))
+#install.packages("BiocManager")
+#BiocManager::install("msa")
 #if (!require("BiocManager", quietly = TRUE))
     #install.packages("BiocManager")
+
 
 #BiocManager::install("ggtree")
 ```
@@ -201,10 +207,15 @@ sequence_merge_main <- merge(seqlist3, bdj, by = "processid")
 ```
 
 Our retrieved sequences and the original "bdj" file are merged by the "processid" column into the "sequence_merge_main" dataframe. This is now the dataframe for the first steps of the tree. 
-Next step is to make the phylogenetic tree. 
+Next step is to make the fasta file for the tree. 
+Credit below code: Seth Bannister 
 ```{r}
-
+names <- (seqlist3$processid)
+sequences <- (seqlist3$retrieved_seq)
+dfintermediate <- data.frame(names,sequences)
+df.fasta1 = dataframe2fas(dfintermediate, file = "df.fasta1")
+view(df.fasta1)
 ```
-
+df.fasta1 is our new fasta file. 
 
 
