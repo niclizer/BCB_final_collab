@@ -107,26 +107,13 @@ slicey <- phylo1%>%slice(1:10)
 view(slicey)
 ```
 Created slicey to practice on
-```{r}
-check<- bold_seq(bin=slicey$bin_uri)
-check
-```
-
 
 ```{r}
-check2<- bold_seq(taxon = NULL, ids = slicey$species_taxID, bin = slicey$bin_uri, container = NULL, institutions = NULL, researchers = NULL, geo = NULL, marker = "COI-5P", response = FALSE)
-check2
+check2<- bold_seq(taxon = NULL, ids = slicey$processid, bin = slicey$bin_uri, container = NULL, institutions = NULL, researchers = NULL, geo = NULL, marker = "COI-5P", response = FALSE)
 ```
 
+Here we matched the bin_uri information to the BOLD database, retrieved the sequence. And next we checked manually the first few entries against the NCBI database to double check the correct species was identified. We used process_id and bin_uri to define the gene and the species. 
 
-```{r}
-dfcheck <- as.data.frame(check2) %>% t() %>% as_tibble()%>% rename(columny=rownames(check2))
-view(dfch)
+check2 was the practice data. 
+Next we need to read the check2 into a 
 
-```
-
-
-```{r}
-see<- bold_identify(sequences = "BOLD:ABA5411", db= "ncbi", response = FALSE)
-see
-```
