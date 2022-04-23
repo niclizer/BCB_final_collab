@@ -14,6 +14,7 @@ library(ggplot2)
 library(reshape2)
 library(bold)
 library(spider)
+library(data.table)
 ```
 
 I also read in the "DS-KROK4BDJ.txt" file, which is a tsv downloaded from our paper of choice and (I believe) contains all the data we will need to work with, including sample IDs, geographic information, and sequences. 
@@ -115,5 +116,43 @@ check2<- bold_seq(taxon = NULL, ids = slicey$processid, bin = slicey$bin_uri, co
 Here we matched the bin_uri information to the BOLD database, retrieved the sequence. And next we checked manually the first few entries against the NCBI database to double check the correct species was identified. We used process_id and bin_uri to define the gene and the species. 
 
 check2 was the practice data. 
-Next we need to read the check2 into a 
+Next we need to read the check2 into a table or similar and extract the sequences. 
+First we make the BOLD output file into a dataframe. This is a very wide dataframe with many columns. 
+
+```{r}
+str(check2)
+sequence_df<- as.data.frame(check2)
+sequence_df
+view(sequence_df)
+```
+
+We want to extract the columns for "id" and "sequence". 
+
+
+```{r}
+```
+
+
+```{r}
+as.data.frame(sequence_df, col.names = c("id", "sequence"))
+```
+Credit for below code: https://stackoverflow.com/questions/26973029/split-one-row-after-every-3rd-column-and-transport-those-3-columns-as-a-new-row
+
+```{r}
+seqlist<- as.data.frame(matrix(unlist(sequence_df, use.names = FALSE), ncol = 4, byrow= TRUE))
+```
+
+```{r}
+seqlist1=seqlist
+colnames(seqlist1) = c("id", "name", "gene", "sequence")
+
+seqlist2 <- as.tibble(seqlist1) %>%select(1,4)
+```
+
+now seqlist2 contains the data we need to merge with our original file
+```{r}
+
+```
+
+
 
