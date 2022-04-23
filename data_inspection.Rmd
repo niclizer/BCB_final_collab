@@ -108,5 +108,21 @@ view(slicey)
 ```
 Created slicey to practice on
 ```{r}
+check<- bold_seq(bin=slicey$bin_uri)
+check
+```
+
+
+```{r}
+check2<- bold_seq(taxon = NULL, ids = NULL, bin = slicey$bin_uri, container = NULL, institutions = NULL, researchers = NULL, geo = NULL, marker = NULL, response = FALSE)
+```
+
+
+```{r}
+check2
+```
+
+
+```{r}
 
 ```
