@@ -114,15 +114,19 @@ check
 
 
 ```{r}
-check2<- bold_seq(taxon = NULL, ids = NULL, bin = slicey$bin_uri, container = NULL, institutions = NULL, researchers = NULL, geo = NULL, marker = NULL, response = FALSE)
-```
-
-
-```{r}
+check2<- bold_seq(taxon = NULL, ids = slicey$species_taxID, bin = slicey$bin_uri, container = NULL, institutions = NULL, researchers = NULL, geo = NULL, marker = "COI-5P", response = FALSE)
 check2
 ```
 
 
 ```{r}
+dfcheck <- as.data.frame(check2) %>% t() %>% as_tibble()%>% rename(columny=rownames(check2))
+view(dfch)
 
+```
+
+
+```{r}
+see<- bold_identify(sequences = "BOLD:ABA5411", db= "ncbi", response = FALSE)
+see
 ```
