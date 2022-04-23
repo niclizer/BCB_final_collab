@@ -20,6 +20,9 @@ library(ggtree)
 library(treeio)
 library(phangorn)
 library(seqRFLP)
+library(ape)
+library(adegenet)
+install.packages("adegenet")
 #if (!requireNamespace("BiocManager", quietly=TRUE))
 #install.packages("BiocManager")
 #BiocManager::install("msa")
@@ -224,8 +227,31 @@ mySequences
 Next align the sequences. 
 ```{r}
 myFirstAlignment <- msa(mySequences)
+myFirstAlignmentconvert <- myFirstAlignment
 ```
 Looks perfect!
 
+```{r}
+#msaPrettyPrint(myFirstAlignment, output="pdf", showNames="none",
+#showLogo="none", askForOverwrite=FALSE, verbose=FALSE)
+```
+```{r}
+alignmentConvert <- msaConvert(myFirstAlignmentconvert, "seqinr::alignment")
+alignConvert <- msaConvert(myFirstAlignmentconvert, "bios2mds::align")
+```
+The below code is credit to https://fuzzyatelin.github.io/bioanth-stats/module-24/module-24.html#step_1
+```{r}
+library(ape)
+dna <- fasta2DNAbin("df1.fasta")
+D <- dist.dna(dna, model = "TN93")
+length(D)
+#number of pairwise distances, computed as n(n-1)/2
+```
+The number of pairwise distances is 7626. 
 
+
+```{r}
+temp <- as.data.frame(as.matrix(D))
+matrix <- table.paint(temp, cleg=0, clabel.row=.5, clabel.col=0.5)
+```
 
