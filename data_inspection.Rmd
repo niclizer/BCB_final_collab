@@ -22,7 +22,7 @@ library(phangorn)
 library(seqRFLP)
 library(ape)
 library(adegenet)
-install.packages("adegenet")
+library(ade4)
 #if (!requireNamespace("BiocManager", quietly=TRUE))
 #install.packages("BiocManager")
 #BiocManager::install("msa")
@@ -243,6 +243,7 @@ The below code is credit to https://fuzzyatelin.github.io/bioanth-stats/module-2
 ```{r}
 library(ape)
 dna <- fasta2DNAbin("df1.fasta")
+
 D <- dist.dna(dna, model = "TN93")
 length(D)
 #number of pairwise distances, computed as n(n-1)/2
@@ -251,7 +252,13 @@ The number of pairwise distances is 7626.
 
 
 ```{r}
-temp <- as.data.frame(as.matrix(D))
-matrix <- table.paint(temp, cleg=0, clabel.row=.5, clabel.col=0.5)
+#temp <- as.data.frame(as.matrix(D))
+#table.paint(temp, clegend = 1, clabel.row= 1, clabel.col= 1)
+```
+```{r}
+table.paint(temp, x = 1:ncol(temp), y = nrow(temp):1, 
+    row.labels = row.names(temp), col.labels = names(temp), 
+    clabel.row = 1, clabel.col = 1, csize = 1, clegend = 1)
+#this is not populating the visualization right
 ```
 
