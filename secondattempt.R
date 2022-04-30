@@ -98,8 +98,10 @@ library(stats)
 library(ips)
 library(msa)
 library(bios2mds)
-install.packages("nat")
-
+install.packages("rgl")
+library(rgl)
+install.packages("nat", dependencies = TRUE)
+library(nat)
 ##########################   WARNING   ##################################
 
 #We would like to warn those who will use the Align command that the alignment process can take 
@@ -114,7 +116,7 @@ install.packages("nat")
 #Even so, if you want to alignment again and export your FASTA file, you can follow instructions as below.
 #If your sequences are not aligned, please run the commands following.
 #If your samples already aligned, you can also set "AlignNeeded = FALSE" below.
-
+remove.packages("rgl")
 AlignNeeded = TRUE # The program reads fasta file and aligns it
 
 if (AlignNeeded) {
