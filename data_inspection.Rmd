@@ -23,6 +23,8 @@ library(seqRFLP)
 library(ape)
 library(adegenet)
 library(ade4)
+library(ggimage)
+library(TDbook)
 #if (!requireNamespace("BiocManager", quietly=TRUE))
 #install.packages("BiocManager")
 #BiocManager::install("msa")
@@ -119,7 +121,7 @@ phylo1 <- phylo%>%add_column(retrieved_seq = NA )%>%select(1:8,81,everything())
 
 We have created the empty column where sequences from BOLD will be put. 
 ```{r}
-slicey <- phylo1%>%slice(1:10)
+slicey <- phylo1
 ```
 Created slicey to practice on
 
@@ -229,8 +231,11 @@ Next align the sequences.
 myFirstAlignment <- msa(mySequences)
 myFirstAlignmentconvert <- myFirstAlignment
 ```
-Looks perfect!
 
+
+```{r}
+
+Looks perfect!
 ```{r}
 #msaPrettyPrint(myFirstAlignment, output="pdf", showNames="none",
 #showLogo="none", askForOverwrite=FALSE, verbose=FALSE)
@@ -243,17 +248,21 @@ The below code is credit to https://fuzzyatelin.github.io/bioanth-stats/module-2
 ```{r}
 library(ape)
 dna <- fasta2DNAbin("df1.fasta")
-
-D <- dist.dna(dna, model = "TN93")
-length(D)
+Dis_pairwise <- dist.dna(dna, model = "TN93")
+length(Dis_pairwise)
 #number of pairwise distances, computed as n(n-1)/2
 ```
 The number of pairwise distances is 7626. 
 
+The problem here, I think, is that we need to plot the heatmap of the pairwise distances. 
+
 
 ```{r}
-#temp <- as.data.frame(as.matrix(D))
+temp <- as.data.frame(as.matrix(Dis_pairwise))
 #table.paint(temp, clegend = 1, clabel.row= 1, clabel.col= 1)
+table.paint(D, x = 1:ncol(df), y = nrow(df):1, 
+    row.labels = row.names(df), col.labels = names(df), 
+    clabel.row = 1, clabel.col = 1, csize = 1, clegend = 1)
 ```
 ```{r}
 table.paint(temp, x = 1:ncol(temp), y = nrow(temp):1, 
@@ -262,3 +271,62 @@ table.paint(temp, x = 1:ncol(temp), y = nrow(temp):1,
 #this is not populating the visualization right
 ```
 
+```{r}
+#tutorial
+dna1 <- fasta2DNAbin(file="http://adegenet.r-forge.r-project.org/files/usflu.fasta")
+annot <- read.csv("http://adegenet.r-forge.r-project.org/files/usflu.annot.csv", header=TRUE, row.names=1)
+annot
+library(ape)
+D1 <- dist.dna(dna1, model = "TN93")
+length(D1) #number of pairwise distances, computed as n(n-1)/2
+bemp <- as.data.frame(as.matrix(D1))
+table.paint(bemp, cleg=0, clabel.row=.5, clabel.col=.5) #darker shades of gray mean a larger distance # you can also make cool color plots but they're much more complicated because they use the image() function
+```
+
+
+```{r}
+#tutorial
+#This block is an attempt to make a heatmap from our msa multiple sequence alignments
+
+```
+```{r}
+library(ggimage)
+library(ggtree)
+library(TDbook)
+# load `tree_boots`, `df_tip_data`, and `df_inode_data` from 'TDbook'
+p <- ggtree(tree_boots) %<+% df_tip_data + xlim(-.1, 4)
+p2 <- p + geom_tiplab(offset = .6, hjust = .5) +
+    geom_tippoint(aes(shape = trophic_habit, color = trophic_habit, 
+                size = mass_in_kg)) + 
+    theme(legend.position = "right") + 
+    scale_size_continuous(range = c(3, 10))
+
+p2 %<+% df_inode_data + 
+    geom_label(aes(label = vernacularName.y, fill = posterior)) + 
+    scale_fill_gradientn(colors = RColorBrewer::brewer.pal(3, "YlGnBu"))
+```
+
+```{r}
+#library("Biostrings")
+#library("seqinr")
+#library("ape")
+#install.packages("phylogram")
+#library("phylogram")
+#install.packages("dendextend")
+#library("dendextend")
+
+#fasta.res <- read.alignment(file = "df1.fasta", format = "fasta")
+#fasta.res.dist.alignment = dist.alignment(msf.res, matrix = "identity")
+#fasta.res.dist.alignment.nj = nj(fasta.res.dist.alignment)
+#plot(fasta.res.dist.alignment.nj, main = "from fasta files")
+```
+
+
+```{r}
+#tre <- nj(D)
+#class(tre) #all trees created using {ape} package will be of class phylo
+
+
+```
+
+We think we have met a dead end here. We will try working with the fuzzy script, from start to end. 
